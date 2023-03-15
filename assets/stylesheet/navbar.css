@@ -1,0 +1,59 @@
+header .navbar{ /* NAVBAR */
+    background: var(--cor-primaria);
+    position:fixed;
+    max-height: 67px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 35px;
+}
+header .navbar .nome h1{ /* NOME NA NAVBAR */
+    color: var(--cor-de-foco);
+    font-size: 32px;
+    font-family: 'Fredoka One', cursive;
+}
+header .navbar .nome h1 span{ /* SPAN PARA MUDAR COR NO H1 */
+    color: var(--cor-fora-de-foco);
+    font-size: 32px;
+    font-family: 'Fredoka One', cursive;
+}
+header .navbar .item{ /* DIV QUE CONTEM A LISTA DE ITENS DA NAVBAR */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header .navbar .itens ul{ /* LISTA DE ITENS NA NAVBAR */
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+header .navbar .itens ul li a{ /* ÂNCORA DOS ITENS */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    color: var(--cor-fora-de-foco);
+    transition: all 0.4s ease-in-out;
+}
+header .navbar .itens ul li a:hover{ /* ITEM NO MENU QUANDO O MOUSE ESTIR SOBRE ELE */
+    color: var(--cor-de-foco);
+    background: var(--cor-fundo-selecao);
+}
+header .navbar .bt-contato{ /* BOTÃO DE CONTATO NA NAVBAR */
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-size: 10px;
+    border-radius: 12px;
+    padding: 14px 30px;
+    color: var(--cor-primaria);
+    background: var(--cor-de-foco);
+    box-shadow: -1px -1px 3px #63626252,
+    1px 1px 3px #63626252;
+    transition: all 0.2s ease-in-out;
+}
+header .navbar .bt-contato:hover{
+    font-size: 12px;
+    padding: 15px 32px;
+}
