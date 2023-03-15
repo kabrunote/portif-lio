@@ -8,6 +8,9 @@
     --cor-fora-de-foco: #3A395D;
     --cor-fundo-selecao: #F7F5FF;
 }
+html {
+    scroll-behavior: smooth;
+}
 *{ /* CONFIGURAÇÕES PARA TODOS ELEMENTOS */
     margin: 0;
     padding: 0;
@@ -19,12 +22,14 @@ body{
     background: var(--cor-primaria);
 }
 header .navbar{ /* NAVBAR */
+    background: var(--cor-primaria);
+    position:fixed;
     max-height: 67px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 35px;
-    padding-top: 28px;
+    padding: 15px 35px;
 }
 header .navbar .nome h1{ /* NOME NA NAVBAR */
     color: var(--cor-de-foco);
@@ -59,6 +64,7 @@ header .navbar .itens ul li a:hover{ /* ITEM NO MENU QUANDO O MOUSE ESTIR SOBRE 
     background: var(--cor-fundo-selecao);
 }
 header .navbar .bt-contato{ /* BOTÃO DE CONTATO NA NAVBAR */
+    text-decoration: none;
     cursor: pointer;
     border: none;
     font-size: 10px;
@@ -75,12 +81,16 @@ header .navbar .bt-contato:hover{
     padding: 15px 32px;
 }
 /* CONTEUDO DO SITE EM SÍ */
-main .inicio{ /* <SECTION> INICIAL DA PÁGINA*/
-    height: 85vh;
+main section{ /* todas as <SECTION> DA PÁGINA*/
+    height: 100vh;
+    padding: 0 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+main section.inicio{ /* PRIMEIRA <SECTION> DA PAGINA*/
     padding: 0 75px;
+    height: 100vh;
 }
 main .inicio .conteudo{ /* BLOCO DE TEXTO DO CONTEÚDO DA PÁGINA */
     height: inherit;
@@ -115,6 +125,8 @@ main .inicio .conteudo a:hover{ /* QUANDO O MOUSE ESTIVER SOBRE O BOTÃO */
 }
  /* CAIXAS DE TEXTO QUE CONTÉM OS TEXTOS '<DEV>' E 'DESIGNER' */
 main .inicio .caixas-texto{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     height: inherit;
     display: flex;
     flex-direction: column;
@@ -139,4 +151,39 @@ main .inicio .caixas-texto .texto h2{
 }
 main .inicio .caixas-texto .texto p{
     font-size: 18px;
+}
+main .sobre-mim{ /* <SECTION> PAGINA SOBRE MIM */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .sobre-mim .texto{
+    border-radius: 50px 4px 50px 4px;
+    width: 60%;
+    padding: 35px 35px;
+    padding-bottom: 60px;
+    color: var(--cor-fundo-selecao);
+    font-family: 'Fredoka One', cursive;
+    background-color: var(--cor-de-foco);
+}
+main .sobre-mim h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+main .sobre-mim p{
+    font-size: 18px;
+    line-height: 25px;
+    text-indent: 12px;
+    letter-spacing: 1px;
+}
+main .sobre-mim .imagem img{
+    width: 400px;
+}
+main section.contato{
+    height: calc(100vh - 57px);
+}
+footer{
+    height: 240px;
+    background: var(--cor-fora-de-foco);
 }
