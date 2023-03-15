@@ -187,3 +187,8 @@ footer{
     height: 240px;
     background: var(--cor-fora-de-foco);
 }
+@media screen and (max-width: 1199px) {
+    *{
+        opacity: 0;
+    }
+}
